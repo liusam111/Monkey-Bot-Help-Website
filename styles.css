@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    background-color: #404040;
+}
+
+/* Title */
+h1 {
+    border: 5px solid white;
+    padding: 5px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    margin: 25px;
+}
+
+
+
+/* Command Open/Close Buttons*/
+button.command {
+    background-color: #242424;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: 0px solid white;
+    transition: 0.4s;
+    font: "Open Sans", sans-serif;
+    font-size: 20px;
+    transition: background-color 0.2s linear;
+    border-radius: 5px;
+}
+
+button.command:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+button.command:focus {outline:0;}
+
+button.command.active {
+    background-color: #000000;
+    border-radius: 5px 5px 0px 0px ; 
+    border: 1px solid white;
+}
+
+/* Command Description and Usage*/
+div.content {
+    background-color: rgba(255,255,255,0.1);
+    padding: 0 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 0px solid white;
+    border-radius: 0px 0px 5px 5px;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+div.content.show {
+    border: 1px solid white;
+}
+
+
+/* Command Description and Usage Text*/
+p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20;
+    color: white;
+}
