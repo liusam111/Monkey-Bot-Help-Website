@@ -13,7 +13,7 @@ for(i = 0; i < acc.length; i++){
             content.style.maxHeight = null;
         } else {
             //Command is closed, need to open
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = (content.scrollHeight + 50) + "px";
         }
     }
 

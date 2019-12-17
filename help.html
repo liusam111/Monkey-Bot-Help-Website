@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
-        <meta name = "Description" content="List of $help commands" />
+        <meta name = "Description" content="List of ~help commands" />
         <meta name="Author" content="Sam"/>
         <meta name ="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css" />
@@ -10,36 +10,46 @@
     </head>
 
     <body>
-        <h1> <center>Monkey Bot Commands and Usage</center></h1>
+        <div id="title">
+            <p> <center>Monkey Bot Commands</center></p>
+        </div>
         
-        <button class="command">help</button>
-        <div id="command-help" class="content">
+        <button class="command">bible</button>
+        <div id="command-bible" class="content">
             <p>
-                <em>Usage: </em>$help <br />
-                <em>Description: </em>DM's user website listing all commands.
+                <em>Usage: </em>~bible <br />
+                <em>Description: </em>Get a random Bible quote.
             </p>
         </div>
 
-        <button class="command">say</button>
-        <div id="command-say" class="content">
+        <button class="command">help</button>
+        <div id="command-help" class="content">
             <p>
-                <em>Usage: </em>$say [message] <br />
-                <em>Description: </em>Makes Monkey Bot say the provided message.
+                <em>Usage: </em>~help <br />
+                <em>Description: </em>DM's user website listing all commands.
             </p>
         </div>
 
         <button class="command">kick</button>
         <div id="command-kick" class="content">
             <p>
-                <em>Usage: </em>$kick [@user] <br/>
+                <em>Usage: </em>~kick [@user] <br/>
                 <em>Description: </em>Kicks the specified user.
+            </p>
+        </div>
+
+        <button class="command">opgg</button>
+        <div id="command-opgg" class="content">
+            <p>
+                <em>Usage: </em> ~opgg [League username] <br/>
+                <em>Description:</em> Shows the Ranked Solo/Duo information of the specified League username.
             </p>
         </div>
 
         <button class="command">pfp</button>
         <div id="command-pfp" class="content">
             <p>
-                <em>Usage: </em>$pfp [@user] <br/>
+                <em>Usage: </em>~pfp [@user] <br/>
                 <em>Description: </em> Shows the profile picture of the specified user. Shows your profile picture if no user is specified.
             </p>   
         </div>
@@ -47,18 +57,19 @@
         <button class="command">profile</button>
         <div id="command-profile" class="content">
             <p>
-                <em>Usage: </em> $profile [@user] <br/>
+                <em>Usage: </em> ~profile [@user] <br/>
                 <em>Description:</em> Shows the account profile of the specified user. Shows your account profile if no user is specified.
             </p>
         </div>
 
-        <button class="command">opgg</button>
-        <div id="command-opgg" class="content">
+        <button class="command">say</button>
+        <div id="command-say" class="content">
             <p>
-                <em>Usage: </em> $opgg [League username] <br/>
-                <em>Description:</em> Shows the Ranked Solo/Duo information of the specified League username.
+                <em>Usage: </em>~say [message] <br />
+                <em>Description: </em>Makes Monkey Bot say the provided message.
             </p>
         </div>
+
 
         <script src="command_buttons.js"></script>
 

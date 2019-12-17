@@ -1,67 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
 
 body {
-    background-color: #404040;
+    background-color: #a07e5d;
+}
+
+/* Always show scrollbar */
+html {
+    overflow-y: scroll;
 }
 
 /* Title */
-h1 {
-    border: 5px solid white;
-    padding: 5px;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    margin: 25px;
+#title{
+    font-family: "Lilita One";
+    color: #ffff7c;
+    background-color: #855e42;
+    border: 5px solid #2c882b;
+    font-size: 60px;
+    margin: 20px;
+    font-weight: bold;
+    min-width: 20%;
 }
 
 
 
 /* Command Open/Close Buttons*/
 button.command {
-    background-color: #242424;
+    background-color: #42a5f5;
     color: white;
     cursor: pointer;
-    padding: 20px;
+    padding: 15px 20px;
     width: 100%;
     text-align: left;
-    border: 0px solid white;
+    border: 0px solid #5280e9;
     transition: 0.4s;
-    font: "Open Sans", sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-size: 20px;
     transition: background-color 0.2s linear;
     border-radius: 5px;
+    min-width: 20%;
+    font-weight: bold;
 }
 
 button.command:hover {
-    background-color: rgba(255,255,255,0.3);
+    background-color: #88c8fc;
 }
 button.command:focus {outline:0;}
 
 button.command.active {
-    background-color: #000000;
-    border-radius: 5px 5px 0px 0px ; 
-    border: 1px solid white;
+    border-radius: 5px 5px 0px 0px ;
+    border: solid #000000;
+    border-width: 1px 1px 0px 1px;
 }
 
 /* Command Description and Usage*/
 div.content {
-    background-color: rgba(255,255,255,0.1);
+    background-color: #42a5f5;
     padding: 0 20px;
     overflow: hidden;
-    margin-bottom: 20px;
-    border: 0px solid white;
+    margin-bottom: 5px;
+    border: 0px solid #000000;
     border-radius: 0px 0px 5px 5px;
     max-height: 0;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.20s ease-in-out;
+    min-width: 20%;
 }
 
 div.content.show {
-    border: 1px solid white;
+    border: 1px solid #000000;
 }
 
 
 /* Command Description and Usage Text*/
 p{
     font-family: "Open Sans", sans-serif;
-    font-size: 20;
+    font-size: 15px;
     color: white;
+    min-width: 20%;
 }
