@@ -5,6 +5,8 @@
 
 body {
     background-color: #2C2F33;
+    margin:0;
+    padding:0;
 }
 
 /* Always show scrollbar */
@@ -12,8 +14,20 @@ html {
     overflow-y: scroll;
 }
 
-/* Title */
+
+#title{
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 #title-content {
+    margin: 0px 0px 20px 0px;
     font-family: "Quicksand";
     color: #ffffff;
     background-color: #23272A;
@@ -25,8 +39,39 @@ html {
     border-bottom: 5px solid #7289DA;
 }
 
-/* Flexbox */
-#horizontal {
+#flex-search {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
+.search-bar-div{
+    flex: 3;
+    text-align: center;
+    margin: 10px 0px 30px 0px;
+}
+
+.search-bar {
+    width: 70%;
+    min-width: 15%;
+    padding: 5px 15px 5px 15px;
+    background-color: #23272A;
+    font-family: "Quicksand";
+    font-size: 20px;
+    color: rgb(151, 151, 151);
+    border: 1px solid #7289DA;
+    border-radius: 20px;
+}
+
+.search-bar:focus {
+    border: 2px solid #7289DA;
+}
+
+
+#flex-button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -34,7 +79,10 @@ html {
     margin-left: 100px;
 }
 
-/* Key Table */
+#spacer-key {
+    height: 75px;
+}
+
 #key {
     width: 300px;
     margin: 10px 25px 10px 25px;
@@ -66,10 +114,10 @@ td {
 #command-list {
     flex: 3;
     margin: 10px 25px 10px 25px;
+    min-width: 200px;
 }
 
 
-/* Command Open/Close Buttons*/
 button.command {
     background-color: #23272A;
     color: #7289DA;
@@ -94,6 +142,9 @@ button.command:hover {
 button.command:focus {
     outline: 0;
 }
+button::-moz-focus-inner {
+    border: 0;
+}
 
 button.command.active {
     border-radius: 5px 5px 0px 0px ;
@@ -101,7 +152,6 @@ button.command.active {
     border-width: 2px 2px 0px 2px;
 }
 
-/* Command Description and Usage*/
 div.content {
     background-color: #23272A;
     padding: 0 20px;
@@ -119,7 +169,7 @@ div.content.show {
 }
 
 
-/* Command Description and Usage Text*/
+
 p{
     font-family: "Open Sans", sans-serif;
     font-size: 15px;

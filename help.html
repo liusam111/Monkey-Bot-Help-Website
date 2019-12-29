@@ -13,9 +13,11 @@
         <div id="title">
             <p id="title-content"> Monkey Bot Commands </p>
         </div>
+    
 
-        <div id="horizontal">
+        <div id="flex-button">
             <div id="sidebar">
+                <div id="spacer-key"></div>
                 <table id="key">
                     <tr>
                         <th>Key</th>
@@ -33,112 +35,145 @@
             </div>
 
             <div id="command-list">
-                <button class="command">bible</button>
-                <div id="command-bible" class="content">
-                    <p>
-                        <em>Usage: </em>~bible <br />
-                        <em>Description: </em>Get a random Bible quote.
-                    </p>
+                <div class="search-bar-div">
+                    <input class="search-bar" type="text" placeholder="Search..." maxlength="20">
                 </div>
 
-                <button class="command">fact</button>
-                <div id="command-fact" class="content">
-                    <p>
-                        <em>Usage: </em>~fact <br />
-                        <em>Description: </em>Generates a random fun fact.
-                    </p>
+
+                <div id="bible">
+                    <button class="command">bible</button>
+                    <div  class="content">
+                        <p>
+                            <em>Usage: </em>~bible <br />
+                            <em>Description: </em>Get a random Bible quote.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div id="facttoggle">
+                    <button class="command">facttoggle *</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em>~facttoggle <br />
+                            <em>Description: </em>Toggles automatic fun facts on/off
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">facttoggle *</button>
-                <div id="command-facttoggle" class="content">
-                    <p>
-                        <em>Usage: </em>~facttoggle <br />
-                        <em>Description: </em>Toggles automatic fun facts on/off
-                    </p>
+
+                <div id="guess">
+                    <button class="command">guess</button>
+                    <div  class="content">
+                        <p>
+                            <em>Usage: </em>~guess <br />
+                            <em>Description: </em> Play a simple guessing game.
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">guess</button>
-                <div id="command-guess" class="content">
-                    <p>
-                        <em>Usage: </em>~guess <br />
-                        <em>Description: </em> Play a simple guessing game.
-                    </p>
+
+                <div id="help">
+                    <button class="command">help</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em>~help <br />
+                            <em>Description: </em>DM's user website listing all commands.
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">help</button>
-                <div id="command-help" class="content">
-                    <p>
-                        <em>Usage: </em>~help <br />
-                        <em>Description: </em>DM's user website listing all commands.
-                    </p>
+
+                <div id="kick">
+                    <button class="command">kick</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em>~kick [@user] <br/>
+                            <em>Description: </em>Kicks the specified user.
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">kick</button>
-                <div id="command-kick" class="content">
-                    <p>
-                        <em>Usage: </em>~kick [@user] <br/>
-                        <em>Description: </em>Kicks the specified user.
-                    </p>
+
+                <div id="league">
+                    <button class="command">league</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em> ~league {-link/-unlink} [League username/@User] <br/>
+                            <em>Description:</em> Shows the Ranked Solo/Duo information of the specified League username. <br/>
+                            <br/>
+                            -link: Associates a League username with your Discord ID<br/>
+                            -unlink: Removes the League username associated with your Discord ID
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">league</button>
-                <div id="command-league" class="content">
-                    <p>
-                        <em>Usage: </em> ~league {-link/-unlink} [League username/@User] <br/>
-                        <em>Description:</em> Shows the Ranked Solo/Duo information of the specified League username. <br/>
-                        <br/>
-                        -link: Associates a League username with your Discord ID<br/>
-                        -unlink: Removes the League username associated with your Discord ID
-                    </p>
+
+                <div id="pfp">
+                    <button class="command">pfp</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em>~pfp {@user} <br/>
+                            <em>Description: </em> Shows the profile picture of the specified user. Shows your profile picture if no user is specified.
+                        </p>   
+                    </div>
                 </div>
 
-                <button class="command">pfp</button>
-                <div id="command-pfp" class="content">
-                    <p>
-                        <em>Usage: </em>~pfp {@user} <br/>
-                        <em>Description: </em> Shows the profile picture of the specified user. Shows your profile picture if no user is specified.
-                    </p>   
+
+                <div id="profile">
+                    <button class="command">profile</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em> ~profile {@user} <br/>
+                            <em>Description:</em> Shows the account profile of the specified user. Shows your account profile if no user is specified.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div id="say">
+                    <button class="command">say</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em>~say [message] <br />
+                            <em>Description: </em>Makes Monkey Bot say the provided message.
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">profile</button>
-                <div id="command-profile" class="content">
-                    <p>
-                        <em>Usage: </em> ~profile {@user} <br/>
-                        <em>Description:</em> Shows the account profile of the specified user. Shows your account profile if no user is specified.
-                    </p>
+
+                <div id="setmain">
+                    <button class="command">setmain *</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em> ~setmain [#channel] <br/>
+                            <em>Description:</em> Sets the channel mentioned to be the channel that the bot sends automatic messages to.
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">say</button>
-                <div id="command-say" class="content">
-                    <p>
-                        <em>Usage: </em>~say [message] <br />
-                        <em>Description: </em>Makes Monkey Bot say the provided message.
-                    </p>
+
+                <div id="sneakysay">
+                    <button class="command">sneakysay</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em>~sneakysay [message] <br />
+                            <em>Description: </em>Same thing as ~say, but the command message is deleted for maximum stealth.
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">setmain *</button>
-                <div id="command-setmain" class="content">
-                    <p>
-                        <em>Usage: </em> ~setmain [#channel] <br/>
-                        <em>Description:</em> Sets the channel mentioned to be the channel that the bot sends automatic messages to.
-                    </p>
+
+                <div id="xp">
+                    <button class="command">xp</button>
+                    <div class="content">
+                        <p>
+                            <em>Usage: </em>~xp {@user}<br />
+                            <em>Description: </em>Shows the level and xp of the specified user. Shows your level and xp if no user is specified.
+                        </p>
+                    </div>
                 </div>
 
-                <button class="command">sneakysay</button>
-                <div id="command-sneakysay" class="content">
-                    <p>
-                        <em>Usage: </em>~sneakysay [message] <br />
-                        <em>Description: </em>Same thing as ~say, but the command message is deleted for maximum stealth.
-                    </p>
-                </div>
-
-                <button class="command">xp</button>
-                <div id="command-xp" class="content">
-                    <p>
-                        <em>Usage: </em>~xp {@user}<br />
-                        <em>Description: </em>Shows the level and xp of the specified user. Shows your level and xp if no user is specified.
-                    </p>
-                </div>
             </div>
         </div>
 
