@@ -68,6 +68,7 @@ html {
 
 .search-bar:focus {
     border: 2px solid #7289DA;
+    outline: 0;
 }
 
 
