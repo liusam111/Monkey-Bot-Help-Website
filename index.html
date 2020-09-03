@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="author" content="Sam"/>
+        <meta name="description" content="List of command descriptions and usage information for Monkey Bot" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css" />
+        <title>Monkey Bot Commands</title>
+        
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Monkey Bot</h1>
+        </header>
+    
+        <main>
+            <aside id="sidebar">
+                <table id="usage-key">
+                    <caption>Command Options</caption>
+                    <tr>
+                        <td>Prefix: ~</td>
+                    </tr>
+                    <tr>
+                        <td>Required: [&emsp;]</td>
+                    </tr>
+                    <tr>
+                        <td>Optional: {&emsp;}</td>
+                    </tr>
+                </table>
+                <ul id="filter">
+                    <li id="filter-all" class="active">All</li>
+                    <li id="filter-general">General</li>
+                    <li id="filter-league">League</li>
+                    <li id="filter-reminders">Reminders</li>
+                </ul>
+            </aside>
+            
+            <div id="list-area">
+                <input id="searchbar" placeholder="Search...">
+                <ol id="commands">
+
+
+
+                    <li class="general">
+                        <h2 class="command-name">help</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>Sends a link to this site to see all commands available along with their usage information</p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~help</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+                    <li class="league">
+                        <h2 class="command-name">league</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Displays the summoner profile with level, rank, winrate, etc. of the mentioned Discord user, the specified League username, 
+                                    or the sender. Allows you to link a League username to the bot.
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~league { --region=XX | -r=XX } {--link | --unlink} { @user | username }</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p><b>Valid Regions:</b><br>NA, EUW, EUNE, LAN, LAS, KR, JP, BR, TR, OCE, RU</p>
+                                <p>If no region is specified, "NA" is used as default</p>
+                                <p>If none of the above options are specified (e.g. <i>~league</i>), displays the sender's profile.</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+
+                    <li class="league">
+                        <h2 class="command-name">livegame</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Displays live League of Legends game information of the mentioned Discord user, the specified League username, 
+                                    or the sender.
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~livegame { --region=XX | -r=XX } { @user | username }</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p><b>Valid Regions:</b><br>NA, EUW, EUNE, LAN, LAS, KR, JP, BR, TR, OCE, RU</p>
+                                <p>If no region is specified, "NA" is used as default</p>
+                                <p>If none of the above options are specified (e.g. <i>~livegame</i>), displays the sender's current game.</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+                    <li class="league">
+                        <h2 class="command-name">mastery</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Displays the top 10 champion mastery information of the mentioned Discord user, the specified League username, 
+                                    or the sender.
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~mastery { --region=XX | -r=XX } { @user | username }</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p><b>Valid Regions:</b><br>NA, EUW, EUNE, LAN, LAS, KR, JP, BR, TR, OCE, RU</p>
+                                <p>If no region is specified, "NA" is used as default</p>
+                                <p>If none of the above options are specified (e.g. <i>~mastery</i>), displays the sender's champion mastery.</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+                    <li class="general">
+                        <h2 class="command-name">pfp</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Displays the Discord profile picture of the mentioned Discord user or the sender
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~pfp { @user }</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p>If no user is mentioned, displays the sender's profile picture</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+
+                    <li class="general">
+                        <h2 class="command-name">profile</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Displays the Discord profile with Discord ID, creation time, and profile picture link of the mentioned Discord user or the sender
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~profile { @user }</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p>If no user is mentioned, displays the sender's profile</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="reminders">
+                        <h2 class="command-name">reminders</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Displays your active reminders, and allows you to edit/delete your reminders. Note that this information will be sent via DM's.
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~reminders</p>
+                                <p>~reminders [ reminder_id ] [ --edittime | -et ] { --timezone=XX | -tz=XX } [ new_time ]</p>
+                                <p>~reminders [ reminder_id ] [ --editmessage | --editmsg | -em ] [ new_message ]</p>
+                                <p>~reminders [ reminder_id ] [ --delete | -d ]</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p>New time can be either an offset, date, time, or date/time combination</p>
+                                <p>Supports both 12-hour and 24-hour format</p>
+                                <p>Offset must be ordered in descending duration (week &gt; day &gt; hour &gt; minute)</p>
+                                <p>Time can be set using the specified timezone, but will ultimately be converted to your saved timezone</p>
+                                <br>                                
+                                <p><b>Valid Date Formats:</b><br>Day of Week, MM/DD, MM/DD/YY, MM/DD/YYYY, MM-DD, MM-DD-YY, MM-DD-YYYY, Month DD, Month DD YYYY, Mon DD, Mon DD YYYY</p>
+                                <p><b>Valid Days of Week:</b><br>Monday, Mon, Tuesday, Tues, Tue, Wednesday, Wed, Thursday, Thurs, Thur, Thu, Friday, Fri, Saturday, Sat, Sunday, Sun</p>
+                                <p><b>Valid Time Formats:</b><br>HH:MM { AM/PM }</p>
+                                <p><b>Valid Offsets:</b><br>week(s), wk(s), w, day(s), d, hour(s), hr(s), h, minute(s), min(s), m</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+                    <li class="reminders">
+                        <h2 class="command-name">remindme</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Sets a reminder. Note that the reminder will be sent via DM's.
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~remindme { --timezone=XX | -tz=XX } [ input_time ]</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p>Input time can be either an offset, date, time, or date/time combination</p>
+                                <p>Supports both 12-hour and 24-hour format</p>
+                                <p>Offset must be ordered in descending duration (week &gt; day &gt; hour &gt; minute)</p>
+                                <p>Time can be set using the specified timezone, but will ultimately be converted to your saved timezone</p>
+                                <br>
+                                <p><b>Valid Date Formats:</b><br>Day of Week, MM/DD, MM/DD/YY, MM/DD/YYYY, MM-DD, MM-DD-YY, MM-DD-YYYY, Month DD, Month DD YYYY, Mon DD, Mon DD YYYY</p>
+                                <p><b>Valid Days of Week:</b><br>Monday, Mon, Tuesday, Tues, Tue, Wednesday, Wed, Thursday, Thurs, Thur, Thu, Friday, Fri, Saturday, Sat, Sunday, Sun</p>
+                                <p><b>Valid Time Formats:</b><br>HH:MM { AM/PM }</p>
+                                <p><b>Valid Offsets:</b><br>week(s), wk(s), w, day(s), d, hour(s), hr(s), h, minute(s), min(s), m</p>
+                            </section>
+                        </div>
+                    </li>
+
+                    <li class="general">
+                        <h2 class="command-name">say</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Make the bot say something
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~say [ message ]</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+
+                    <li class="reminders">
+                        <h2 class="command-name">timezone</h2>
+                        <div class="command-info">
+                            <section class="description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    Displays or saves your timezone for reminder-related commands
+                                </p>
+                            </section>
+                            <hr>
+                            <section class="usage">
+                                <h3>USAGE</h3>
+                                <p>~timezone { timezone }</p>
+                            </section>
+                            <hr>
+                            <section class="details">
+                                <h3>DETAILS</h3>
+                                <p>If no timezone is specified, displays your current timezone</p>
+                                <p>Default timezone is "America/Los_Angeles" (UTC-8)</p>
+                                <p>Valid timezones can be found under "TZ database name" <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">here</a>.</p>
+                            </section>
+                        </div>
+                    </li>
+
+
+
+
+
+                </ol>
+            </div>
+
+        </main>
+
+
+    </body>
+</html>

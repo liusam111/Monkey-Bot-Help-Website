@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
+
+:root{
+    --bg-dark-gray: #2f3136;
+    --bg-light-gray: #36393f;
+    --bg-hover-gray: #3e4246;
+    --text-blue: #7289da;
+    --text-light-gray: #606369;
+    --text-lighter-gray: #8c9699;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+html {
+    overflow-y: scroll;
+    background-color: var(--bg-light-gray);
+    color: white;
+    font-family: "Open Sans";
+    font-size: 20px;
+}
+
+header, main{
+    margin: 0 20% 0 20%;
+}
+
+header{
+    margin-bottom: 1em;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1{
+    padding: 15px;
+    font-size: 2.5em;
+}
+
+b {
+    color: var(--text-lighter-gray);
+}
+
+a{
+    color: white;
+}
+
+hr, p{
+    margin: 0.75em 0 0.75em 0;
+    font-size: 0.75em;
+}
+
+#sidebar{
+    flex: 1;
+    margin-right: 2em;
+}
+
+#list-area{
+    flex: 3;
+}
+
+
+
+
+table {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--bg-dark-gray);
+    border: 2px solid var(--text-blue);
+    color: var(--text-blue);
+}
+
+caption{
+    padding: 0.5em;
+    border-color: var(--text-blue);
+    border-style: solid;
+    border-width: 2px 2px 0 2px;
+    background-color: var(--bg-dark-gray);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+td {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8em;
+}
+
+
+#filter{
+    list-style-type: none;
+    padding: 1.5em 0 1.5em 0;
+}
+
+#filter > li{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: var(--bg-dark-gray);
+    margin: 0.25em 0 0.25em;
+    padding: 5px 5px 5px 15px;
+    transition: background-color 0.2s ease;
+}
+
+
+
+
+
+#searchbar{
+    width: 70%;
+    margin: 0 15% 15px 15%;
+    padding: 5px 15px 5px 15px;
+    background-color: var(--bg-dark-gray);
+    font-family: "Quicksand";
+    font-size: 1em;
+    color: #999999;
+    border: 1px solid var(--text-blue);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#searchbar:focus{
+    box-shadow: 0 0 0 1px var(--text-blue);
+}
+
+#commands{
+    list-style-type: none;
+}
+
+#commands > li{
+    margin: 5px 0 5px 0;
+}
+
+.command-name{
+    font-size: 1em;
+    padding: 10px 10px;
+    color: var(--text-blue);
+    border: 1px solid transparent;
+    background-color: var(--bg-dark-gray);
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.command-info{
+    background-color: var(--bg-dark-gray);
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.20s ease-in-out;
+}
+
+hr{
+    border-color: var(--text-light-gray);
+    margin: 0;
+}
+
+section{
+    padding: 10px;
+}
+
+section > h3{
+    font-size: 0.75em;
+    color: var(--text-lighter-gray);
+}
+
+
+
+
+.command-name:hover, #filter > li:hover {
+    transition: background-color 0.2s ease;
+    background-color: var(--bg-hover-gray);
+    cursor: pointer;
+}
+
+#filter > li:hover{
+    border: 1px solid var(--text-blue);
+}
+
+.command-name.open{
+    border: 1px solid var(--text-blue);
+    border-radius: 5px 5px 0 0;
+}
+
+.command-info.open{
+    border: 1px solid var(--text-blue);
+    border-top-color: transparent;
+}
+
+#filter > li.active{
+    border: 2px solid var(--text-blue);
+}
